@@ -1,6 +1,6 @@
-/Users/liuyan/Documents/MicroServices/ehsgitlab/gateway-zuul/src/main/java/com/ehs/gateway/config/CustomRibbonApacheHttpRequest.java
-/Users/liuyan/Documents/MicroServices/ehsgitlab/gateway-zuul/src/main/java/com/ehs/gateway/config/CustomHttpClientRibbonCommandFactory.java
-/Users/liuyan/Documents/MicroServices/ehsgitlab/gateway-zuul/src/main/java/com/ehs/gateway/ZuulApplication.java
-/Users/liuyan/Documents/MicroServices/ehsgitlab/gateway-zuul/src/main/java/com/ehs/gateway/config/CustomHttpClientRibbonCommand.java
-/Users/liuyan/Documents/MicroServices/ehsgitlab/gateway-zuul/src/main/java/com/ehs/gateway/config/ResourceServerConfiguration.java
-/Users/liuyan/Documents/MicroServices/ehsgitlab/gateway-zuul/src/main/java/com/ehs/gateway/filter/AuthHeaderFilter.java
+/Users/liuyan/Documents/MicroServices/code/gateway-zuul/src/main/java/com/ehs/gateway/filter/AuthHeaderFilter.java
+/Users/liuyan/Documents/MicroServices/code/gateway-zuul/src/main/java/com/ehs/gateway/config/CustomHttpClientRibbonCommandFactory.java
+/Users/liuyan/Documents/MicroServices/code/gateway-zuul/src/main/java/com/ehs/gateway/config/ResourceServerConfiguration.java
+/Users/liuyan/Documents/MicroServices/code/gateway-zuul/src/main/java/com/ehs/gateway/config/CustomRibbonApacheHttpRequest.java
+/Users/liuyan/Documents/MicroServices/code/gateway-zuul/src/main/java/com/ehs/gateway/ZuulApplication.java
+/Users/liuyan/Documents/MicroServices/code/gateway-zuul/src/main/java/com/ehs/gateway/config/CustomHttpClientRibbonCommand.java

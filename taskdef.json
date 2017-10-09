@@ -1,9 +1,9 @@
 {
-    "family": "auth-server",
+    "family": "ehs-gateway",
     "containerDefinitions": [
         {
-            "image": "069272800445.dkr.ecr.cn-north-1.amazonaws.com.cn/auth-server:latest",
-            "name": "auth-server",
+            "image": "069272800445.dkr.ecr.cn-north-1.amazonaws.com.cn/ehs-gateway:latest",
+            "name": "ehs-gateway",
             "cpu": 10,
             "memory": 2048,
             "essential": true,
@@ -11,8 +11,8 @@
             "dockerSecurityOptions": null,
             "portMappings": [
                 {
-                    "containerPort": 7777,
-                    "hostPort": 7777,
+                    "containerPort": 8040,
+                    "hostPort": 8040,
                     "protocol": "tcp"
                 }
             ]
