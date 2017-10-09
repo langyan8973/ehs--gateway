@@ -32,7 +32,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @EnableZuulProxy
 public class ZuulApplication {
 	
-
+	//测试更新自动构建
 	@Autowired(required = false)
     private Set<ZuulFallbackProvider> zuulFallbackProviders = Collections.emptySet();
 
