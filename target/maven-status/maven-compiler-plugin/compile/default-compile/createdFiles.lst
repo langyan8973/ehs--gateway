@@ -1,0 +1,6 @@
+com/ehs/gateway/config/CustomHttpClientRibbonCommand.class
+com/ehs/gateway/config/CustomHttpClientRibbonCommandFactory.class
+com/ehs/gateway/config/ResourceServerConfiguration.class
+com/ehs/gateway/ZuulApplication.class
+com/ehs/gateway/filter/AuthHeaderFilter.class
+com/ehs/gateway/config/CustomRibbonApacheHttpRequest.class

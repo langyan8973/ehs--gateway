@@ -1,0 +1,21 @@
+{
+    "family": "auth-server",
+    "containerDefinitions": [
+        {
+            "image": "069272800445.dkr.ecr.cn-north-1.amazonaws.com.cn/auth-server:latest",
+            "name": "auth-server",
+            "cpu": 10,
+            "memory": 2048,
+            "essential": true,
+            "hostname": "auth-server",
+            "dockerSecurityOptions": null,
+            "portMappings": [
+                {
+                    "containerPort": 7777,
+                    "hostPort": 7777,
+                    "protocol": "tcp"
+                }
+            ]
+        }
+    ]
+}

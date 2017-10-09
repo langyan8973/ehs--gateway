@@ -1,0 +1,63 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: ehs_gateway-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+
+zuul:
+  routes:
+    oauth-server:
+      path: /uaa/**
+      serviceId: oauth-server
+      sensitiveHeaders:
+      strip-prefix: false
+#  ignored-services: '*'
+#  routes:
+#    oauth-server:
+#      path: /uaa/**
+#      serviceId: oauth-server
+#      sensitiveHeaders:
+#      strip-prefix: false
+#    api-service:
+#      path: /demo/**
+#      serviceId: api-service
+#      sensitiveHeaders:
+#      strip-prefix: false
+  max:
+    host:
+      connections: 500
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+security:
+  sessions: stateless
+  oauth2:
+    resource:
+      loadBalanced: true #设置这个才可以使用eureka的服务名，配合loadBalancerInterceptor bean。
+      user-info-uri: http://oauth-server/uaa/user
+#      user-info-uri: http://54.223.100.159:7777/uaa/user
+      prefer-token-info: false
+#      service-id: api-service   
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 1
+  eureka:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+                        
