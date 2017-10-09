@@ -7,8 +7,7 @@
             "cpu": 10,
             "memory": 2048,
             "essential": true,
-            "hostname": "auth-server",
-            "dockerSecurityOptions": null,
+            "hostname": "ehs-gateway",
             "portMappings": [
                 {
                     "containerPort": 8040,
