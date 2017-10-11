@@ -1,4 +1,5 @@
 /Users/liuyan/Documents/MicroServices/code/gateway-zuul/src/main/java/com/ehs/gateway/filter/AuthHeaderFilter.java
+/Users/liuyan/Documents/MicroServices/code/gateway-zuul/src/main/java/com/ehs/gateway/config/CorsFilter.java
 /Users/liuyan/Documents/MicroServices/code/gateway-zuul/src/main/java/com/ehs/gateway/config/CustomHttpClientRibbonCommandFactory.java
 /Users/liuyan/Documents/MicroServices/code/gateway-zuul/src/main/java/com/ehs/gateway/config/ResourceServerConfiguration.java
 /Users/liuyan/Documents/MicroServices/code/gateway-zuul/src/main/java/com/ehs/gateway/config/CustomRibbonApacheHttpRequest.java

@@ -1,7 +1,5 @@
 package com.ehs.gateway;
 
-import java.io.IOException;
-import java.security.Principal;
 import java.util.Collections;
 import java.util.Set;
 
@@ -17,12 +15,11 @@ import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.cloud.netflix.zuul.filters.route.RibbonCommandFactory;
 import org.springframework.cloud.netflix.zuul.filters.route.ZuulFallbackProvider;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+import com.ehs.gateway.config.CorsFilter;
 import com.ehs.gateway.config.CustomHttpClientRibbonCommandFactory;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
@@ -51,13 +48,22 @@ public class ZuulApplication {
       return new LoadBalancerInterceptor(loadBalance);
   }
   
-//  @RequestMapping("/")
-//  @HystrixCommand(fallbackMethod = "defaultProductComposite")
-//  public ResponseEntity<String> getProductComposite(
-//      @RequestHeader(value="Authorization") String authorizationHeader,
-//      Principal currentUser) {
-//
-//      LOG.info("ProductApi: User={}, Auth={}, called with productId={}",
-//        currentUser.getName(), authorizationHeader, productId);
-//  }
+  private CorsConfiguration buildConfig() {
+		CorsConfiguration corsConfiguration = new CorsConfiguration();
+		corsConfiguration.addAllowedOrigin("*");
+		corsConfiguration.addAllowedHeader("*");
+		corsConfiguration.addAllowedMethod("*");
+		return corsConfiguration;
+	}
+  
+  /**
+	 * 跨域过滤器
+	 * @return
+	 */
+	@Bean
+	public CorsFilter corsFilter() {
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		source.registerCorsConfiguration("/**", buildConfig()); // 4
+		return new CorsFilter(source);
+	}
 }

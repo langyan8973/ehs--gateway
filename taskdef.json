@@ -1,5 +1,6 @@
 {
     "family": "ehs-gateway",
+    "networkMode": "host",
     "containerDefinitions": [
         {
             "image": "069272800445.dkr.ecr.cn-north-1.amazonaws.com.cn/ehs-gateway:latest",
