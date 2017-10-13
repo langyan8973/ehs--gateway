@@ -15,8 +15,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-@Component
-@Order(Ordered.HIGHEST_PRECEDENCE)
+
 public class CorsFilter implements Filter {
 
 
